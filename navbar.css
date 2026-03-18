@@ -1,0 +1,296 @@
+:root {
+    --primary-blue: #2563eb;
+    --bg-color: #f1f5f9;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+}   
+
+body {
+    font-family: sans-serif;
+    background-color: white;
+}
+
+.header {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    display: inline-flex;
+    align-items: left;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.navbar i {
+    font-size: 1.1rem; 
+    color: black;    
+}
+
+.navbar a.logout {
+    color: #ef4444; 
+}
+
+.navbar a.logout i {
+    color: #ef4444; 
+}
+
+.navbar a:hover {
+    color: #2563eb;
+}
+
+.btn-add {
+    background: var(--primary-blue);
+    color: blue;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-add:hover {
+    background-color: #1d4ed8; 
+}
+.icons div {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: #1e293b;
+}
+
+
+/* THE GRID SYSTEM */
+.resident-grid {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 20px;       
+}
+h3 {
+  margin-top: -5px; 
+}
+
+.filters-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    top: -30px; 
+}
+.filter h3 {
+   margin-top: 20px;
+}
+.info {
+    max-width: 1200px; 
+    margin: 0 auto;  
+    padding: 0 20px;   
+}
+
+.header .container {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    height: 80px;              
+}
+.filter-controls { display: flex; gap: 20px; }
+.input-group { display: flex; flex-direction: column; flex: 1; }
+
+/* THE CARD */
+.resident-card {
+    background: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    top: -30px; 
+}
+.page-header {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    margin-top: 20px;          
+    margin-bottom: 30px;       
+    margin-right: 10px;
+}
+
+
+
+.btn-add {
+    margin-top: 10px; 
+    background-color: #2563eb;
+    color: white !important;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.card-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.resident-name { font-size: 1.1rem; margin: 0; color: var(--text-main); }
+.resident-id { font-size: 0.8rem; color: var(--text-muted); }
+
+.card-actions { display: flex; gap: 8px; }
+.btn-icon { background: none; border: none; cursor: pointer; font-size: 14px; }
+.pdf { color: #dc2626; } /* Red for PDF */
+.edit { color: #2563eb; }
+.delete { color: #ef4444; }
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    padding: 4px 0;
+}
+.info-row span { color: var(--text-muted); }
+
+
+/* Mobile Responsive */
+#menu-btn {
+    display: none;
+}
+
+
+/*total residents, total users, and recent design */
+.total-container{
+    display: flex;       
+    gap: 40px;          
+    padding-top: 10px;  
+}
+.total {
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    display: inline-block;
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    top: -30px; 
+}
+
+.total-resident { font-size: 1rem; margin: 1; color: var(--text-main); }
+
+.total span{
+    display: block;     
+    color: blue;
+    margin-left: 0;       
+    font-size: 24px;    
+    font-weight: bold;
+}
+.filter-total { display: flex; gap: 20px; }
+
+.total-icons{
+    color: black;
+    position: relative;
+    position: absolute;
+    top: 15px;         
+    right: 25px;       
+    
+    
+    background: #f0fdf4; 
+    color: blue;
+    padding: 10px;
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* user management design */
+.user-cards{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    top: -30px; 
+}
+.u-class{
+     display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+
+}
+
+
+.u-class span {
+    flex: 1; 
+    text-align: left;
+}
+
+.u-class .col-email {
+    flex: 2; 
+}
+
+
+.col-role {
+    flex: 1;
+    display: flex;         
+    justify-content: flex-start; 
+}
+
+.badge {
+    background-color: #e0e7ff; 
+    color: #4338ca;           
+    font-weight: bold;
+
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    
+    
+    display: inline-block;
+    width: auto;
+}
+.users-class { font-size: 1rem; margin: 1; color: var(--text-main); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #menu-btn { display: inline-block; }
+    .navbar { display: none; } 
+}
